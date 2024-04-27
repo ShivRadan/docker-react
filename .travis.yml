@@ -13,7 +13,7 @@ script:
 deploy:
   proider: elasticbeanstalk
   region: eu-north-1
-  app: "docker"
+  app: "Frontend"
   env: "Frontend-env"
   bucket_name: "elasticbeanstalk-eu-north-1-058264231492"
   bucket_path: docker

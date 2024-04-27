@@ -9,3 +9,16 @@ before_install:
 
 script:
   - docker run -e CI=true shiv/docker-react npm run test
+
+deploy:
+  proider: elasticbeanstalk
+  region: eu-north-1
+  app: "docker"
+  env: "Frontend-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-058264231492"
+  bucket_path: docker
+  on:
+    master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+
